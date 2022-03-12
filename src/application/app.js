@@ -1,3 +1,5 @@
+import ClickEventTester from "./ClickEventTester.js";
+
 class app extends HTMLElement{
     constructor(){
         super();
@@ -24,7 +26,8 @@ class app extends HTMLElement{
 
     render() {
         const message = this.attributes.message.value || '[Empty]';
-        this.innerHTML = `<h1>${message}</h1>`;
+        this.innerHTML = `<h1>${message}</h1>
+        <click-event-tester/>`;
         console.log("message changed");
     }
 }
